@@ -17,7 +17,7 @@ A modern, responsive landing page for promoting an event. Built with HTML, CSS, 
 ## 🚀 Live Demo
 
 Once deployed, your live site will be available at:  
-➡️ [https://your-username.github.io/event-landing-page/](https://your-username.github.io/event-landing-page/)
+➡️ [https://your-username.github.io/event-guide/](https://your-username.github.io/event-guide/)
 
 ---
 
@@ -71,7 +71,7 @@ To run locally:
 
 ## 🙌 Credits
 
-Built by [Your Name]  
+Built by Absolon Kent
 Design inspired by modern conference landing pages.
 
 ---
