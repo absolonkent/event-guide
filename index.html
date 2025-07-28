@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">EventName</div>
+      <nav>
+        <ul>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#register">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Your Event Title</h1>
+      <p>July 27–30, 2025 • Annandale, VA</p>
+      <a href="#register" class="cta-button">Register Now</a>
+    </section>
+
+    <section id="overview">
+      <h2>About the Event</h2>
+      <p>
+        Welcome to the ultimate experience for designers, developers, and
+        dreamers. Three days of workshops, panels, and networking.
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <div class="card-grid">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Day 1</h3>
+              <p>Opening Ceremony • Keynotes</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Details</h3>
+              <p>
+                Starts at 9:00 AM with welcome remarks followed by guest
+                keynotes in Hall A.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Day 2</h3>
+              <p>Workshops • Breakout Sessions • Panel Talks</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Details</h3>
+              <p>
+                Starts at 9:00 AM with welcome remarks followed by guest
+                keynotes in Hall A.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Day 3</h3>
+              <p>Hackathon • Awards • Closing Remarks</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Details</h3>
+              <p>
+                Starts at 9:00 AM with welcome remarks followed by guest
+                keynotes in Hall A.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers">
+      <h2>Meet the Speakers</h2>
+      <div class="speaker-grid">
+        <article class="speaker-card">
+          <img
+            src="speaker1.jpg"
+            alt="Dr. Maya Chen - AI Ethicist"
+            loading="lazy"
+          />
+          <h3>Dr. Maya Chen</h3>
+          <p>
+            AI Ethicist & Author — exploring responsible tech and global
+            governance.
+          </p>
+        </article>
+        <article class="speaker-card">
+          <img
+            src="speaker2.jpg"
+            alt="Juan Martínez - UX Lead at Creatify"
+            loading="lazy"
+          />
+          <h3>Juan Martínez</h3>
+          <p>UX Lead at Creatify — designing empathy into every interface.</p>
+        </article>
+        <article class="speaker-card">
+          <img
+            src="speaker3.jpg"
+            alt="Sierra Thompson - Developer Advocate"
+            loading="lazy"
+          />
+          <h3>Sierra Thompson</h3>
+          <p>
+            Developer Advocate at CodeSpark — championing open source and
+            inclusion.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="venue">
+      <h2>Venue</h2>
+      <p>
+        Held at Annandale Conference Center • Parking and metro access
+        available.
+      </p>
+    </section>
+
+    <section id="register">
+      <h2>Register</h2>
+      <p>Secure your spot—spaces are limited!</p>
+      <a href="#" class="cta-button">Sign Up</a>
+    </section>
+
+    <section id="rsvp">
+      <h2>RSVP Now</h2>
+      <form id="rsvp-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="attendance">Will you attend?</label>
+        <select id="attendance" name="attendance" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="maybe">Maybe</option>
+          <option value="no">No</option>
+        </select>
+
+        <button type="submit">Submit RSVP</button>
+        <p id="response-message"></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 EventName. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const form = document.getElementById("rsvp-form");
+      const message = document.getElementById("response-message");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const attendance = document.getElementById("attendance").value;
+
+        if (name && email && attendance) {
+          message.textContent = `Thanks, ${name}! Your RSVP (${attendance}) has been noted.`;
+          message.style.color = "green";
+          form.reset();
+
+          setTimeout(() => {
+            message.textContent = "";
+            message.style.color = "";
+          }, 5000);
+        } else {
+          message.textContent = "Please fill in all fields.";
+          message.style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

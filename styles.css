@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #004080;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero {
+  padding: 4em 2em;
+  text-align: center;
+  background: linear-gradient(to right, #0066cc, #3399ff);
+  color: white;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background-color: white;
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+section {
+  padding: 3em 2em;
+}
+.card-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 100vh;
+}
+.card {
+  background-color: #eef5ff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+footer {
+  padding: 2em;
+  background-color: #004080;
+  color: white;
+  text-align: center;
+}
+#rsvp {
+  padding: 3em 2em;
+  background-color: #f0f8ff;
+}
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+input,
+select,
+button {
+  padding: 0.75em;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0066cc;
+}
+#response-message {
+  margin-top: 1em;
+  font-weight: bold;
+  color: green;
+}
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 180px;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.flip-card-front {
+  background-color: #eef5ff;
+}
+.flip-card-back {
+  background-color: #004080;
+  color: white;
+  transform: rotateY(180deg);
+}
